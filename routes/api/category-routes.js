@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
       model: Product
     }
   })
-  .then(category => res.json(category))
+  .then((category) => res.json(category))
   .catfch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -25,7 +25,7 @@ router.get('/:id', (req, res) => {
       model: Product,
     }
   })
-  .then(category => res.json(category))
+  .then((category) => res.json(category))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -36,7 +36,7 @@ router.post('/', (req, res) => {
   Category.create({
     category_name: req.body.category_name
   })
-  .then(category => res.json(category))
+  .then((category) => res.json(category))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
